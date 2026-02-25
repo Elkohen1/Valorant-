@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription Tournoi de Valorant</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+            /* Image en arrière-plan */
+            background-image: url("valo.webp");
+            background-size: cover;        /* couvre tout l’écran */
+            background-position: center;   /* centre l’image */
+            background-repeat: no-repeat;  /* pas de répétition */
+            background-attachment: fixed;  /* effet fixe */
+        }
+
+        /* Boîte du formulaire avec fond semi-transparent */
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            width: 400px;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: #dc143c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a10f2c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Formulaire d'inscription Tournoi de Valorant</h2>
+
+        <form action="#" method="post">
+
+            <label>Nom *</label>
+            <input type="text" name="nom" required>
+
+            <label>Prénom *</label>
+            <input type="text" name="prenom" required>
+
+            <label>Adresse e-mail *</label>
+            <input type="email" name="email" required>
+
+            <label>Mot de passe *</label>
+            <input type="password" name="password" minlength="8" required>
+
+            <label>Sexe :</label><br>
+            <input type="radio" name="sexe" value="Homme"> Homme
+            <input type="radio" name="sexe" value="Femme"> Femme
+            <br><br>
+
+            <label>Pays :</label>
+            <select name="pays">
+                <option>France</option>
+                <option>Canada</option>
+                <option>Espagne</option>
+                <option>Maroc</option>
+            </select>
+
+            <label>Langues parlées :</label><br>
+            <input type="checkbox" name="langues"> Français
+            <input type="checkbox" name="langues"> Anglais
+            <input type="checkbox" name="langues"> Espagnol
+            <br><br>
+
+            <label>Message :</label>
+            <textarea name="message" rows="4"></textarea>
+
+            <input type="checkbox" name="conditions" required>
+            J'accepte les conditions d'utilisation *
+            <br><br>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
